@@ -1,5 +1,4 @@
 var todoList = document.getElementById('todo-list')
-var todo = document.getElementById('todo');
 
 
 var toggleCheck = function () {
@@ -16,7 +15,7 @@ var addTodo = function (todo) {
     var todoLabel = document.createElement('label');
     var todoCheckbox = document.createElement('input');
 
-    todoLabel.innerHTML = todo.value;
+    todoLabel.innerHTML = todo;
     todoCheckbox.setAttribute('type', 'checkbox');
     todoCheckbox.onclick = toggleCheck;
 
@@ -38,6 +37,6 @@ document.getElementById('add').onclick = function () {
         alert('Please enter a todo');
     } else {
         addTodo(addTextInput.value);
-        addTextInput.value.value = '';
+        addTextInput.value = '';
     }
 };
